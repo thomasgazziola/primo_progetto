@@ -1,5 +1,6 @@
-<!DOCTYPE html>
+
 {% load static %}
+<!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
@@ -27,6 +28,9 @@
         
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
+            <li>
+              <a class="nav-link" href="{% url 'prima_app:homepage'%}">homepage</a>
+            </li>
             
             <!-- 5.b: Menu dropdown "Prima app" -->
             <li class="nav-item dropdown">
@@ -34,11 +38,11 @@
                 Prima app
               </a>
               <ul class="dropdown-menu" aria-labelledby="primaAppDropdown">
-                <!-- Sostituire o collegare qui le voci presenti nell'index della Prima app -->
-                <li><a class="dropdown-item" href="#">Voce 1</a></li>
-                <li><a class="dropdown-item" href="#">Voce 2</a></li>
+                <li><a class="dropdown-item" href="{% url 'prima_app:welcome'%}">Welcome</a></li>
+                <li><a class="dropdown-item" href="{% url 'prima_app:chi_siamo'%}">Chi Siamo</a></li>
+                <li><a class="dropdown-item" href="{% url 'prima_app:variabili'%}">Variabili</a></li>
+                 <li><a class="dropdown-item" href="{% url 'prima_app:index'%}">Index</a></li>
               </ul>
-            </li>
 
             <!-- 5.c: Menu dropdown "Seconda app" -->
             <li class="nav-item dropdown">
@@ -47,9 +51,13 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="secondaAppDropdown">
                 <!-- Sostituire o collegare qui le voci presenti nell'index della Seconda app -->
-                <li><a class="dropdown-item" href="#">Voce 1</a></li>
-                <li><a class="dropdown-item" href="#">Voce 2</a></li>
+                <li><a class="dropdown-item" href="{% url 'seconda_app:es_if'%}">es_if</a></li>
               </ul>
+            </li>
+
+            <li class = "nav-item">
+              <a class="nav-link" href="{% url 'admin:index'%}">Admin</a>
+
             </li>
 
           </ul>
